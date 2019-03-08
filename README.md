@@ -1,39 +1,27 @@
+# Go Project
+[![Go Report Card](https://goreportcard.com/badge/github.com/noltron000/BEW-2-5_how-i-roll)](https://goreportcard.com/report/github.com/noltron000/BEW-2-5_how-i-roll)
+> [Course Documentation](https://make.sc/bew2.5)
 
-# go-getting-started
+This project was made for the backend web course @ [Make School](https://make.sc/), focusing on [GoLang](https://golang.org/).
 
-A barebones Go app, which can easily be deployed to Heroku.
+# How I Roll
+This app is "How I Roll". It's a web app that can simulate dice rolls.
 
-This application supports the [Getting Started with Go on Heroku](https://devcenter.heroku.com/articles/getting-started-with-go) article - check it out.
-
-## Running Locally
-
-Make sure you have [Go](http://golang.org/doc/install) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
-
-```sh
-$ go get -u github.com/heroku/go-getting-started
-$ cd $GOPATH/src/github.com/heroku/go-getting-started
-$ heroku local
-```
-
-Your app should now be running on [localhost:5000](http://localhost:5000/).
-
-You should also install [govendor](https://github.com/kardianos/govendor) if you are going to add any dependencies to the sample app.
-
-## Deploying to Heroku
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
-
-or
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+## `v0.0` Functionality
+At the moment, there is little to no functionality. However, one can get a local build running by following these steps:
+1. fork or clone this repository.
+1. `cd` into project directory within a new terminal instance.
+1. run `go run ./go/main.go` in terminal.
+1. navigate to `localhost:8080` in a browser of your choice.
 
 
-## Documentation
+**Dice Roller**<br />
+Unfortunately the dice roller has not been connected to the html yet. However the program itself still works in the command line. Follow the steps above with the following differences:
+- at step 3, replace `./go/main.go` with `./go/roller/roller.go PARAMS`.
+- replace `PARAMS` with a dice amount, such as *1d6* or *8d4* before running.
+- do not follow the rest of the steps.
 
-For more information about using Go on Heroku, see these Dev Center articles:
+These steps will at least get you up and running for development implementations.
 
-- [Go on Heroku](https://devcenter.heroku.com/categories/go)
+## Sources
+1. [Wikipedia](https://en.wikipedia.org/wiki/Dice_notation)
