@@ -28,6 +28,7 @@ import (
 
 // index route applies for `/`
 func index(context echo.Context) error {
+	fmt.Println("Got to INDEX route")
 	return context.File("./html/index.html")
 }
 
@@ -46,6 +47,7 @@ func roll(context echo.Context) error {
 
 // main gets echo server up and running
 func main() {
+	fmt.Println("Started Main Function")
 	// port is an env var
 	port := os.Getenv("PORT")
 	if port == "" {
@@ -56,5 +58,6 @@ func main() {
 	router := echo.New()
 	router.GET("/", index)
 	router.GET("/roll", roll)
+	fmt.Println("Now listening to port...")
 	router.Start(port)
 }
